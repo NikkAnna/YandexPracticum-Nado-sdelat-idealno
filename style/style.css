@@ -31,14 +31,13 @@ body::before {
   object-position: center;
   position: absolute;
   inset: 0;
-  z-index: -2;
+  z-index: -3;
 } 
 
 .page__heading {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 739px 1fr;
-  z-index: 0;
   padding: 60px 0 0;
 }
 
@@ -51,6 +50,7 @@ body::before {
   flex-direction: column;
   margin: 0;
   grid-column-start: 2;
+  z-index: 0;
 }
 
 span {
@@ -78,4 +78,8 @@ span:last-child:after {
   border-bottom: 14px solid black;
   right: 1.25%;
   top: 21%;
+}
+
+.page__title:hover {
+  z-index: -3;
 }
