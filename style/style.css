@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  min-width: 800px;
+  height: 100%;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.30);
+  z-index: -1;
+}
+
+.page__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+} 
+
+.page__heading {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 739px 1fr;
+  z-index: 0;
+  padding: 60px 0 0;
+}
+
+.page__title {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 118px;
+  letter-spacing: 4.06px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  grid-column-start: 2;
+}
+
+span {
+  display: inline-block;
+  align-self: center;
+}
+
+span:last-child:after {
+  content: "*";
+}
+
+.page__title:hover::before {
+  content: "На самом деле нет. \AВажнее \2014  научиться ошибаться.";
+  position: absolute;
+  border-radius: 20px;
+  background: #FFF;
+  font-size: 35px;
+  line-height: 100%;
+  padding: 36px 44px;
+  font-family: "Raleway";
+  font-weight: 400;
+  text-transform: none;
+  white-space: pre;
+  border: 2px solid black;
+  border-bottom: 14px solid black;
+  right: 1.25%;
+  top: 21%;
+}
