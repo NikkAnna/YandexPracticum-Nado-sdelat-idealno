@@ -8,78 +8,71 @@ html {
   height: 100%;
 }
 
-body {
-  margin: 0 auto;
-  font-family: 'Raleway', 'Arial', sans-serif;
+.page {
+  position: relative;
+  display: flex;
   min-width: 800px;
   height: 100%;
-  position: relative;
+  margin: 0;
+  padding: 60px 0 0;
+  font-family: "Raleway", "Arial", sans-serif;
+  text-align: center;
+  background-color: #fec7ee;
 }
 
-body::before {
+.page::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.30);
   z-index: -1;
+  background: rgba(255 255 255 / 0.3);
 }
 
 .page__video {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  position: absolute;
-  inset: 0;
-  z-index: -3;
-} 
-
-.page__heading {
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr 739px 1fr;
-  padding: 60px 0 0;
 }
 
 .page__title {
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 118px;
-  letter-spacing: 4.06px;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  grid-column-start: 2;
   z-index: 0;
+  max-width: 765px;
+  max-height: 410px;
+  margin: 0 auto;
+  font-weight: 800;
+  font-size: 116px;
+  letter-spacing: 3.06px;
+  text-transform: uppercase;
 }
 
-span {
-  display: inline-block;
-  align-self: center;
-}
-
-span:last-child:after {
+.page__title::after {
   content: "*";
+  position: relative;
+}
+
+.page__title:hover {
+  color: #4c4c4c;
+  cursor: default;
 }
 
 .page__title:hover::before {
   content: "На самом деле нет. \AВажнее \2014  научиться ошибаться.";
   position: absolute;
+  top: 180px;
+  right: 20px;
+  border: 2px solid black;
   border-radius: 20px;
-  background: #FFF;
-  font-size: 35px;
-  line-height: 100%;
   padding: 36px 44px;
+  box-shadow: 0 12px 0 black;
   font-family: "Raleway";
   font-weight: 400;
-  text-transform: none;
+  font-size: 35px;
+  line-height: 1;
+  text-transform: initial;
+  background: #fff;
   white-space: pre;
-  border: 2px solid black;
-  border-bottom: 14px solid black;
-  right: 1.25%;
-  top: 21%;
-}
-
-.page__title:hover {
-  z-index: -3;
 }
